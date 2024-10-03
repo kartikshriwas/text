@@ -2,12 +2,10 @@
 <html lang="en">
 
 <head>
-       
     <meta charset="UTF-8">
-       
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Batch B Timetable</title>
-        <style>
+    <title>Batch B Timetable</title>
+    <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f5f5f5;
@@ -15,9 +13,9 @@
             padding: 20px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            height: 100vh;
+            justify-content: center;
+            min-height: 100vh;
         }
 
         h2 {
@@ -39,11 +37,11 @@
 
         th,
         td {
-            padding: 10px;
             text-align: center;
             font-size: 14px;
             color: #333;
             transition: background-color 0.3s ease;
+            padding: 15px;
         }
 
         th {
@@ -95,22 +93,21 @@
             color: #333 !important;
             font-weight: bold;
         }
-
         td,
         th {
             border-bottom: 1px solid #e0e0e0;
         }
-
-        td:last-child,
-        th:last-child {
-            border-right: none;
+        .table-container {
+            width: 69%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
         }
 
         @media screen and (max-width: 768px) {
 
             th,
             td {
-                padding: 8px;
+                padding: 10px;
                 font-size: 12px;
             }
 
@@ -118,88 +115,98 @@
                 font-size: 20px;
             }
         }
+
+        @media screen and (max-width: 600px) {
+
+            th,
+            td {
+                padding: 8px;
+                font-size: 10px;
+            }
+        }
     </style>
 </head>
 
 <body>
-      <h2>Time Table Session 2024-25 (Odd Semester) - Batch B</h2>
-    <table id="timetable">
-        <tr>
-            <th class="time">Day</th>
-            <th class="time">09:00 - 09:30</th>
-            <th class="time">09:30 - 10:00</th>
-            <th class="time">10:00 - 10:30</th>
-            <th class="time">10:30 - 11:00</th>
-            <th class="time">11:00 - 11:30</th>
-            <th class="time">11:30 - 12:00</th>
-            <th class="time">12:00 - 12:30</th>
-            <th class="time">12:30 - 01:00</th>
-            <th class="time">01:00 - 01:30</th>
-            <th class="time">01:30 - 02:00</th>
-            <th class="time">02:00 - 02:30</th>
-            <th class="time">02:30 - 03:00</th>
-            <th class="time">03:00 - 03:30</th>
-            <th class="time">03:30 - 04:00</th>
-            <th class="time">04:00 - 04:30</th>
-            <th class="time">04:30 - 05:00</th>
-            <th class="time">05:00 - 05:30</th>
-        </tr>
-        <tr>
-            <td class="day"><strong>Monday</strong></td>
-            <td colspan="4" class="practical">H1 - AC (pkd) <br> H2 - BEE (ppd)<br> H3 - IP (nsb)</td>
-            <td class="recess"><strong>Recess</strong></td>
-            <td colspan="2" class="lecture">AC (ysm) [ICR-6]</td>
-            <td colspan="2" class="lecture">AM-II (amk) [ICR-6]</td>
-            <td colspan="2"></td>
-            <td colspan="2"></td>
-            <td colspan="2"></td>
-        </tr>
-        <tr>
-            <td class="day"><strong>Tuesday</strong></td>
-            <td colspan="4"></td>
-            <td class="lecture" colspan="2">UHV (ICR-6)</td>
-            <td class="lecture" colspan="2">IP (ICR-6)</td>
-            <td class="recess"><strong>Recess</strong></td>
-            <td colspan="4" class="workshop">Workshop / Digital Fabrication Lab</td>
-            <td colspan="2"></td>
-        </tr>
-        <tr>
-            <td class="day"><strong>Wednesday</strong></td>
-            <td colspan="4"></td>
-            <td colspan="4" class="practical">H2 - AC (pkd) <br> H3 - BEE (ppd)<br> H1 - IP (nsb)</td>
-            <td class="recess"><strong>Recess</strong></td>
-            <td class="lecture" colspan="2">AM-II (ICR-6)</td>
-            <td class="lecture" colspan="2">UHV (ICR-6)</td>
-            <td class="lecture" colspan="2">BE (ICR-6)</td>
-        </tr>
-        <tr>
-            <td class="day"><strong>Thursday</strong></td>
-            <td colspan="4"></td>
-            <td class="lecture" colspan="2">AC (ICR-6)</td>
-            <td class="lecture" colspan="2">BEE (ICR-6)</td>
-            <td class="recess"><strong>Recess</strong></td>>
-            <td class="lecture" colspan="2">IKS (ICR-6)</td>
-            <td class="lecture" colspan="2">IP (ICR-6)</td>
-        </tr>
-        <tr>
-            <td class="day"><strong>Friday</strong></td>
-            <td colspan="4"></td>
-            <td class="lecture" colspan="2">BEE (ICR-6)</td>
-            <td class="lecture" colspan="2">BE (ICR-6)</td>
-            <td class="recess"><strong>Recess</strong></td>
-            <td colspan="4" class="practical">H3 - AC (pkd) <br> H1 - BEE (ppd)<br> H2 - IP (nsb)</td>
-        </tr>
-        <tr>
-            <td class="day"><strong>Saturday</strong></td>
-            <td colspan="4"></td>
-            <td class="lecture" colspan="2">AM-II (ICR-2)</td>
-            <td class="lecture" colspan="2">IKS (ICR-2)</td>
-            <td class="recess"><strong>Recess</strong></td>
-            <td class="lecture" colspan="2">IP (ICR-2)</td>
-            <td class="lecture" colspan="2">AC (ICR-2)</td>
-        </tr>
-    </table>
-
+    <h2>Time Table Session 2024-25 (Odd Semester) - Batch B</h2>
+    <div class="table-container">
+        <table id="timetable">
+            <tr>
+                <th class="time">Day</th>
+                <th class="time">09:00 - 09:30</th>
+                <th class="time">09:30 - 10:00</th>
+                <th class="time">10:00 - 10:30</th>
+                <th class="time">10:30 - 11:00</th>
+                <th class="time">11:00 - 11:30</th>
+                <th class="time">11:30 - 12:00</th>
+                <th class="time">12:00 - 12:30</th>
+                <th class="time">12:30 - 01:00</th>
+                <th class="time">01:00 - 01:30</th>
+                <th class="time">01:30 - 02:00</th>
+                <th class="time">02:00 - 02:30</th>
+                <th class="time">02:30 - 03:00</th>
+                <th class="time">03:00 - 03:30</th>
+                <th class="time">03:30 - 04:00</th>
+                <th class="time">04:00 - 04:30</th>
+                <th class="time">04:30 - 05:00</th>
+                <th class="time">05:00 - 05:30</th>
+            </tr>
+            <tr>
+                <td class="day"><strong>Monday</strong></td>
+                <td colspan="4" class="practical">H1 - AC (pkd) <br> H2 - BEE (ppd)<br> H3 - IP (nsb)</td>
+                <td class="recess"><strong>Recess</strong></td>
+                <td colspan="2" class="lecture">AC (ysm) <br> <br> [ICR-6]</td>
+                <td colspan="2" class="lecture">AM-II (amk) <br> <br> [ICR-6]</td>
+                <td colspan="2"></td>
+                <td colspan="2"></td>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td class="day"><strong>Tuesday</strong></td>
+                <td colspan="4"></td>
+                <td class="lecture" colspan="2">UHV (ctp) <br> [ICR-6]</td>
+                <td class="lecture" colspan="2">IP (avd) <br> [ICR-6]</td>
+                <td class="recess"><strong>Recess</strong></td>
+                <td colspan="4" class="workshop">Workshop / Digital Fabrication Lab (vvk) </td>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td class="day"><strong>Wednesday</strong></td>
+                <td colspan="4"></td>
+                <td colspan="4" class="practical"> H1 - IP (rpf)<br>H2 - AC (pkd) <br> H3 - BEE (ppd)</td>
+                <td class="recess"><strong>Recess</strong></td>
+                <td class="lecture" colspan="2">AM-II (amk) <br> [ICR-6]</td>
+                <td class="lecture" colspan="2">UHV (ctp) <br> [ICR-6]</td>
+                <td class="lecture" colspan="2">BE (awh) <br> [ICR-6]</td>
+            </tr>
+            <tr>
+                <td class="day"><strong>Thursday</strong></td>
+                <td colspan="4"></td>
+                <td class="lecture" colspan="2">AC (ysm) <br> [ICR-6]</td>
+                <td class="lecture" colspan="2">BEE (ppd) <br> [ICR-6]</td>
+                <td class="recess"><strong>Recess</strong></td>
+                <td class="lecture" colspan="2">IKS (msa) <br> [ICR-6]</td>
+                <td class="lecture" colspan="2">IP (avd) <br> [ICR-6]</td>
+            </tr>
+            <tr>
+                <td class="day"><strong>Friday</strong></td>
+                <td colspan="4"></td>
+                <td class="lecture" colspan="2">BEE (ppd) <br> [ICR-6]</td>
+                <td class="lecture" colspan="2">BE (awh) <br> [ICR-6]</td>
+                <td class="recess"><strong>Recess</strong></td>
+                <td colspan="4" class="practical">H1 - BEE (ppd) <br>H2 - IP (nsb) <br> H3 - AC (pkd)</td>
+            </tr>
+            <tr>
+                <td class="day"><strong>Saturday</strong></td>
+                <td colspan="4"></td>
+                <td class="lecture" colspan="2">AM-II (amk) <br> [ICR-2]</td>
+                <td class="lecture" colspan="2">IKS (kpn) <br> [ICR-2]</td>
+                <td class="recess"><strong>Recess</strong></td>
+                <td class="lecture" colspan="2">IP (avd) <br> [ICR-2]</td>
+                <td class="lecture" colspan="2">AC (ysm) <br> [ICR-2]</td>
+            </tr>
+        </table>
+    </div>
     <script>
         const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         const currentDay = new Date().getDay();
@@ -212,5 +219,4 @@
         });
     </script>
 </body>
-
 </html>
